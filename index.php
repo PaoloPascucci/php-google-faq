@@ -26,7 +26,18 @@ $faq = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google faq</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
         img{
             vertical-align:middle;
         }
@@ -38,9 +49,16 @@ $faq = [
             display:flex;
             flex-direction:row
         }
+        ul, hr{
+            margin:0;
+        }
         li{
             list-style:none;
-            margin:1rem;
+            padding:0 1rem 4rem 1rem;
+        }
+        li:last-child{
+            color:#377dff;
+            border-bottom:5px solid #377DFF;
         }
         main{
             width:60%;
@@ -60,12 +78,15 @@ $faq = [
 </ul>
     </header>
     <hr>
+    <br>
     <main>
         <?php 
         for ($i=0; $i <count($faq) ; $i++) {?>
         <section>
             <h1><?= $faq[$i]['Domanda'];?></h1>
+            <br>
             <p><?= $faq[$i]['Risposta'];?></p>
+            <br>
         </section>
         <?php 
         };
