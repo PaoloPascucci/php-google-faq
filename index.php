@@ -29,42 +29,6 @@ $faq = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing:border-box;
-        }
-        body{
-            font-family: 'Roboto', sans-serif;
-        }
-        img{
-            vertical-align:middle;
-        }
-        span{
-            vertical-align:middle;
-            font-size:25px;
-        }
-        .flex{
-            display:flex;
-            flex-direction:row
-        }
-        ul, hr{
-            margin:0;
-        }
-        li{
-            list-style:none;
-            padding:0 1rem 4rem 1rem;
-        }
-        li:last-child{
-            color:#377dff;
-            border-bottom:5px solid #377DFF;
-        }
-        main{
-            width:60%;
-            margin:auto;
-        }
-    </style>
 </head>
 <body>
     <header>
