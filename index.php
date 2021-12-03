@@ -1,20 +1,20 @@
 <?php
 $faq = [
-    [
-        'Domanda' => 'Come state implementando la recente decisione della Corte di giustizia dell Unione europea (CGUE) relativa al diritto all oblio?'
-        'Risposta' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur praesentium porro? Ex error fugiat dolores temporibus quam placeat corporis nostrum voluptatibus consectetur, perspiciatis natus praesentium adipisci exercitationem aperiam commodi?'
-    ],
-    [
-        'Domanda' => 'Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?'
-        'Risposta' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur praesentium porro? Ex error fugiat dolores temporibus quam placeat corporis nostrum voluptatibus consectetur, perspiciatis natus praesentium adipisci exercitationem aperiam commodi?'
-    ],
-    [
-        'Domanda' => 'Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?'
-        'Risposta' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur praesentium porro? Ex error fugiat dolores temporibus quam placeat corporis nostrum voluptatibus consectetur, perspiciatis natus praesentium adipisci exercitationem aperiam commodi?'
-    ],
-    [
-        'Domanda' => 'Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?'
-        'Risposta' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur praesentium porro? Ex error fugiat dolores temporibus quam placeat corporis nostrum voluptatibus consectetur, perspiciatis natus praesentium adipisci exercitationem aperiam commodi?'
+     [
+         'Domanda' => "Come state implementando la recente decisione della Corte di giustizia dell Unione europea (CGUE) relativa al diritto all oblio?",
+         'Risposta' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ratione doloremque accusamus, veniam minima cum quos deleniti iure debitis ullam ab hic itaque consequatur iusto dignissimos molestias incidunt! Vel excepturi at suscipit laborum! Dolor veritatis voluptatibus nihil a labore, ipsam velit laborum consequuntur officia nesciunt laboriosam sapiente. Quos omnis iure commodi, dolorem dolores, dignissimos quod perferendis temporibus tempora facilis repellendus, magnam ipsum eos saepe esse debitis necessitatibus quis accusamus incidunt enim eius? Cum, vero, officiis alias ad fugit quos sunt nihil officia reiciendis fuga dolorem velit minus. Cumque iure blanditiis pariatur assumenda porro rerum natus nostrum sed vel, animi qui!"
+     ],
+     [
+         'Domanda' => "Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?",
+         'Risposta' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ratione doloremque accusamus, veniam minima cum quos deleniti iure debitis ullam ab hic itaque consequatur iusto dignissimos molestias incidunt! Vel excepturi at suscipit laborum! Dolor veritatis voluptatibus nihil a labore, ipsam velit laborum consequuntur officia nesciunt laboriosam sapiente. Quos omnis iure commodi, dolorem dolores, dignissimos quod perferendis temporibus tempora facilis repellendus, magnam ipsum eos saepe esse debitis necessitatibus quis accusamus incidunt enim eius? Cum, vero, officiis alias ad fugit quos sunt nihil officia reiciendis fuga dolorem velit minus. Cumque iure blanditiis pariatur assumenda porro rerum natus nostrum sed vel, animi qui!"
+     ],
+     [
+         'Domanda' => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?",
+         'Risposta' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ratione doloremque accusamus, veniam minima cum quos deleniti iure debitis ullam ab hic itaque consequatur iusto dignissimos molestias incidunt! Vel excepturi at suscipit laborum! Dolor veritatis voluptatibus nihil a labore, ipsam velit laborum consequuntur officia nesciunt laboriosam sapiente. Quos omnis iure commodi, dolorem dolores, dignissimos quod perferendis temporibus tempora facilis repellendus, magnam ipsum eos saepe esse debitis necessitatibus quis accusamus incidunt enim eius? Cum, vero, officiis alias ad fugit quos sunt nihil officia reiciendis fuga dolorem velit minus. Cumque iure blanditiis pariatur assumenda porro rerum natus nostrum sed vel, animi qui!"
+     ],
+     [
+         'Domanda' => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
+         'Risposta' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ratione doloremque accusamus, veniam minima cum quos deleniti iure debitis ullam ab hic itaque consequatur iusto dignissimos molestias incidunt! Vel excepturi at suscipit laborum! Dolor veritatis voluptatibus nihil a labore, ipsam velit laborum consequuntur officia nesciunt laboriosam sapiente. Quos omnis iure commodi, dolorem dolores, dignissimos quod perferendis temporibus tempora facilis repellendus, magnam ipsum eos saepe esse debitis necessitatibus quis accusamus incidunt enim eius? Cum, vero, officiis alias ad fugit quos sunt nihil officia reiciendis fuga dolorem velit minus. Cumque iure blanditiis pariatur assumenda porro rerum natus nostrum sed vel, animi qui!"
     ],
 ];
 ?>
@@ -42,6 +42,10 @@ $faq = [
             list-style:none;
             margin:1rem;
         }
+        main{
+            width:60%;
+            margin:auto;
+        }
     </style>
 </head>
 <body>
@@ -57,10 +61,17 @@ $faq = [
     </header>
     <hr>
     <main>
-        
+        <?php 
+        for ($i=0; $i <count($faq) ; $i++) {?>
         <section>
-
+            <h1><?= $faq[$i]['Domanda'];?></h1>
+            <p><?= $faq[$i]['Risposta'];?></p>
         </section>
+        <?php 
+        };
+        ?>
     </main>
 </body>
 </html>
+
+
